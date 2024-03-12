@@ -25,6 +25,7 @@ jobs:
       with: 
         files: |
            CONTRIBUTORS.md
+    
     - name: Display changes to CONTRIBUTORS file
       if: steps.changed_files.outputs.files_changed == 'true'
       run: |
@@ -36,3 +37,9 @@ jobs:
         git config --global user.email github-actions@github.com
         git commit -a -m "(CI) format code"
         git push
+
+
+
+
+
+
